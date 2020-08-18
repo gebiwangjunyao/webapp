@@ -5,38 +5,38 @@
         <div id="content0">
             <h2>朝食</h2>
             <p class="details">詳細</p>
-            <div class="time">
+            <p class="centertime">今の時間</p>
+            <div class="time0">
                 <p class="lefttime">開始時間</p>
-                <p class="centertime">今の時間</p>
                 <p class="rightime">終了時間</p>
             </div>
             <progress id="file" max="100" value="70">70</progress>
-            <div class="time">
+            <div class="time1">
                 <p class="lefttime">総時間</p>
                 <p class="rightime">残り時間</p>
             </div>
             <div id= "chooes0">
                <ul>
-                   <li>アラームを設定</li>
-                   <li>プログレスバーを設定</li>
+                   <li><a href="">アラームを設定</a></li>
+                   <li><a href="">プログレスバーを設定</a></li>
                </ul>
             </div>
         </div>
         <div id="content1">
             <h3>休みの日</h3>
-            <table id="employee_list">
-                <tbody>
-                    <tr>
-                        <th>開始時間</th>
-                        <th>終了時間</th>
-                        <th>クエスト</th>
-                    </tr>
-                </tbody>
-            </table>
+                <table id="time_list">
+                    <tbody>
+                        <tr>
+                            <th>開始時間</th>
+                            <th>終了時間</th>
+                            <th>クエスト</th>
+                        </tr>
+                    </tbody>
+                </table>
             <div id= "chooes1">
                <ul>
-                   <li>日を編集</li>
-                   <li>カレンダーを編集</li>
+                   <li><a href="">日を編集</a></li>
+                   <li><a href="">カレンダーを編集</a></li>
                </ul>
             </div>
         </div>
