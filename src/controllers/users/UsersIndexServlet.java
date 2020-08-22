@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import models.User;
 import utils.DBUtil;
 
 /**
@@ -38,7 +39,7 @@ public class UsersIndexServlet extends HttpServlet {
         try{
             page = Integer.parseInt(request.getParameter("page"));
         } catch(NumberFormatException e) { }
-        List<User> employees = em.createNamedQuery("getAllEmployees", User.class)
+        List<User> users = em.createNamedQuery("getAllEmployees", User.class)
                                      .setFirstResult(15 * (page - 1))
                                      .setMaxResults(15)
                                      .getResultList();
@@ -48,7 +49,7 @@ public class UsersIndexServlet extends HttpServlet {
 
         em.close();
 
-        request.setAttribute("employees", employees);
+        request.setAttribute("users", users);
         request.setAttribute("employees_count", employees_count);
         request.setAttribute("page", page);
         if(request.getSession().getAttribute("flush") != null) {
