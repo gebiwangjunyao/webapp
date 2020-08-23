@@ -1,4 +1,5 @@
 package filters;
+/*文字化け対策:*/
 
 import java.io.IOException;
 

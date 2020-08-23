@@ -17,7 +17,7 @@
             <h1 id="title">のルーティン生活</h1>
             <a id="login" href="">ログイン</a>
         </div>
-        <div id="content">${param.content}</div>
+        <div id="main">${param.main}</div>
         <div id="footer">
             <a id="sign" href="">by 王</a>
         </div>

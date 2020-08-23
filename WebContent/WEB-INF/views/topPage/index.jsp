@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:import url="../layout/app.jsp">
-    <c:param name="content">
+    <c:param name="main">
         <div id="left-container">
             <div id="top-left">
                 <h2 id="top-h2">朝食</h2>
@@ -18,7 +18,16 @@
 
         <div id="right-container">
             <p id="right-title">休みの日</p>
-            <div id="toplist-box">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>開始時間</th>
+                            <th>終了時間</th>
+                            <th>クエスト</th>
+                        </tr>
+                       </tbody>
+                </table>
+            <div id="rightlist">
                 <table id="toplist">
                     <tbody>
                         <tr>
