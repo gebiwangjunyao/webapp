@@ -13,7 +13,6 @@
     <div id="wrapper">
         <div id="background-color"></div>
         <div id="header">
-            <p id="lable">Toppage</p>
             <h1 id="title">のルーティン生活</h1>
             <a id="login" href="">ログイン</a>
         </div>

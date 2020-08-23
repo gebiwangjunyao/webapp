@@ -6,12 +6,15 @@
               <div id="left-container">
                 <div id="all-left">
                   <h2 id="new_edit-h2">休みの日</h2>
-                  <p id="save">保存</p>
+                  <p id="save">新規</p>
                      <table id="new_edit-name">
                          <tbody>
                              <tr>
-                                <th>日の名前</th>
-                                <th>追加</th>
+                                <th>開始時間</th>
+                                <th>終了時間</th>
+                                <th>クエスト</th>
+                                <th>内容詳細</th>
+                                <th>　</th>
                              </tr>
                          </tbody>
                      </table>
@@ -19,9 +22,17 @@
                      <table id="new_edit-list">
                          <tbody>
                              <tr>
-                                <th>日の名前</th>
-                                <th>追加</th>
+                                <th>開始時間</th>
+                                <th>終了時間</th>
+                                <th>クエスト</th>
+                                <th>内容詳細</th>
+                                <th>削除</th>
                              </tr>
+                                <tr>
+                                <td>
+                                <a href="">新規</a>
+                                </td>
+                                </tr>
                          </tbody>
                      </table>
                  </div>
