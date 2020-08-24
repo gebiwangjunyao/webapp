@@ -1,6 +1,5 @@
 package models;
 
-import java.sql.Date;
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
@@ -37,21 +36,18 @@ public class Routine {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @Column(name = "report_date", nullable = false)
-    private Date report_date;
-
-    @Column(name = "title", length = 255, nullable = false)
-    private String title;
+    @Column(name = "quset", length = 255, nullable = false)
+    private String quset;
 
     @Lob
     @Column(name = "content", nullable = false)
     private String content;
 
-    @Column(name = "created_at", nullable = false)
-    private Timestamp created_at;
+    @Column(name = "start_at", nullable = false)
+    private Timestamp start_at;
 
-    @Column(name = "updated_at", nullable = false)
-    private Timestamp updated_at;
+    @Column(name = "end_at", nullable = false)
+    private Timestamp end_at;
 
     public Integer getId() {
         return id;
@@ -69,20 +65,12 @@ public class Routine {
         this.user = user;
     }
 
-    public Date getReport_date() {
-        return report_date;
+    public String getquset() {
+        return quset;
     }
 
-    public void setReport_date(Date report_date) {
-        this.report_date = report_date;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+    public void setquset(String quset) {
+        this.quset = quset;
     }
 
     public String getContent() {
@@ -93,19 +81,19 @@ public class Routine {
         this.content = content;
     }
 
-    public Timestamp getCreated_at() {
-        return created_at;
+    public Timestamp getstart_at() {
+        return start_at;
     }
 
-    public void setCreated_at(Timestamp created_at) {
-        this.created_at = created_at;
+    public void setstart_at(Timestamp start_at) {
+        this.start_at = start_at;
     }
 
-    public Timestamp getUpdated_at() {
-        return updated_at;
+    public Timestamp getend_at() {
+        return end_at;
     }
 
-    public void setUpdated_at(Timestamp updated_at) {
-        this.updated_at = updated_at;
+    public void setend_at(Timestamp end_at) {
+        this.end_at = end_at;
     }
 }

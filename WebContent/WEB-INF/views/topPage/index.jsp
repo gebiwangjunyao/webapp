@@ -7,7 +7,7 @@
             <div id="top-left">
                 <h2 id="top-h2">朝食</h2>
                 <p id="details">詳細</p>
-                <p id="now-time">今の時間</p>
+                <p id="now-time"><script src="script.js"></script></p>
                 <p class="start-time">開始時間</p>
                 <p class="end-time">終了時間</p>
                 <progress id="file" class="center" max="100" value="70">70</progress>
@@ -17,16 +17,22 @@
         </div>
 
         <div id="right-container">
-            <p id="right-title">休みの日</p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>開始時間</th>
-                            <th>終了時間</th>
-                            <th>クエスト</th>
-                        </tr>
-                       </tbody>
-                </table>
+            <p id="right-title">
+                <select name="セレクト名">
+                    <option value="1">選択肢１</option>
+                    <option value="2" selected>選択肢２</option>
+                    <option value="3" disabled>選択肢３</option>
+                </select>の日
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>開始時間</th>
+                        <th>終了時間</th>
+                        <th>クエスト</th>
+                    </tr>
+                </tbody>
+            </table>
             <div id="rightlist">
                 <table id="toplist">
                     <tbody>
@@ -35,7 +41,7 @@
                             <th>終了時間</th>
                             <th>クエスト</th>
                         </tr>
-                       </tbody>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -47,8 +53,8 @@
         </div>
         <div id="right-option">
             <ul class="top-ul">
-                <li><a href="">日を編集</a></li>
-                <li><a href="">カレンダーを編集</a></li>
+                <li><a href="<c:url value='/Web_new' />">日を編集</a></li>
+                <li><a href="<c:url value='/setcalender' />">カレンダーを編集</a></li>
             </ul>
         </div>
     </c:param>
