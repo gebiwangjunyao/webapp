@@ -30,7 +30,7 @@ public class Web_new extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("_token", request.getSession().getId());
-        request.setAttribute("employee", new User());
+        request.setAttribute("user", new User());
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/new_edit/new_edit.jsp");
         rd.forward(request, response);

@@ -7,7 +7,7 @@
             <div id="top-left">
                 <h2 id="top-h2">朝食</h2>
                 <p id="details">詳細</p>
-                <p id="now-time"><script src="script.js"></script></p>
+                <p id="now-time"><script src="css/script.js"></script></p>
                 <p class="start-time">開始時間</p>
                 <p class="end-time">終了時間</p>
                 <progress id="file" class="center" max="100" value="70">70</progress>

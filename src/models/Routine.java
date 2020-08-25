@@ -14,14 +14,14 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
-@Table(name = "reports")
+@Table(name = "routines")
 @NamedQueries({
     @NamedQuery(
-            name = "getAllReports",
+            name = "getAllRoutines",
             query = "SELECT r FROM Routine AS r ORDER BY r.id DESC"
             ),
     @NamedQuery(
-            name = "getReportsCount",
+            name = "getRoutinesCount",
             query = "SELECT COUNT(r) FROM Routine AS r"
             ),
 })

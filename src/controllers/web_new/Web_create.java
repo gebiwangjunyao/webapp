@@ -1,7 +1,6 @@
 package controllers.web_new;
 
 import java.io.IOException;
-import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -13,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import models.Routine;
 import models.validators.ReportValidator;
 import utils.DBUtil;
 /**
@@ -38,23 +38,16 @@ public class Web_create extends HttpServlet {
         if(_token != null && _token.equals(request.getSession().getId())) {
             EntityManager em = DBUtil.createEntityManager();
 
-            Report r = new Report();
+            Routine r = new Routine();
 
-            r.setEmployee((Employee)request.getSession().getAttribute("login_employee"));
+            r.setUser((User)request.getSession().getAttribute("login_user"));
 
-            Date report_date = new Date(System.currentTimeMillis());
-            String rd_str = request.getParameter("report_date");
-            if(rd_str != null && !rd_str.equals("")) {
-                report_date = Date.valueOf(request.getParameter("report_date"));
-            }
-            r.setReport_date(report_date);
-
-            r.setTitle(request.getParameter("title"));
+            r.setquset(request.getParameter("quset"));
             r.setContent(request.getParameter("content"));
 
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
-            r.setCreated_at(currentTime);
-            r.setUpdated_at(currentTime);
+            r.setstart_at(currentTime);
+            r.setend_at(currentTime);
 
             List<String> errors = ReportValidator.validate(r);
             if(errors.size() > 0) {
